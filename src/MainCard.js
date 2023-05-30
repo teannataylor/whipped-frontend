@@ -4,9 +4,10 @@ import {Link} from 'react-router-dom'
 //this component creates the recipe card for when fullList is called
 export default function MainCard({name,image,id}) {
 
-  
+  // lg:grid-cols-4 grid grid-cols-3 gap-1
   return (
-    <div className='grid grid-cols lg:grid-cols-4 gap-6 pt-2 px-2'>
+    <div>
+    <div className=''>
             <div className='border shadow-lg rounded-lg hover:scale-105 duration-300'>
           <img src={image} alt={name} className='w-full h-[200px] object-cover' />
          <div className='flex justify-between px-2 py-4'> 
@@ -15,5 +16,8 @@ export default function MainCard({name,image,id}) {
          </div>
     </div>
     </div>
+ </div>
   )
 }
+
+// 

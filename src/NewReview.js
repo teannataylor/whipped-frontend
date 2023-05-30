@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { useParams } from 'react-router-dom'
 
 // this should POST a new review under each Recipe; will also need a state for this?
-function NewReview (){
+function NewReview ({addReview}){
 const {id} = useParams()
 
 const defaultForm = {
@@ -52,8 +52,7 @@ const handleSubmit = (e) =>{
 
 fetch(`http://localhost:9292/reviews`, config)
   .then(res => res.json()) //parses the data/response once it is resolved  into consumable JSON
-  .then(data => {
-    console.log(data, 'this is a post for a review')}); //2nd promise rec'vs the data and is used to set state
+  .then(data => {addReview(data)}); //2nd promise rec'vs the data and is used to set state
 }
 // debugger
 
@@ -92,7 +91,7 @@ fetch(`http://localhost:9292/reviews`, config)
     <label>
       <h1>Leave a ☆ Rating</h1>
       <br/>
-    <select className='form-select' name="stars" value={formState.stars} onChange={handleValue}>
+    <select className='form-select border border-pink-500 rounded-xl px-5 py-1' name="stars" value={formState.stars} onChange={handleValue}>
       <option value={1}>1</option>
       <option value={2}>2</option>
       <option value={3}>3</option>
@@ -102,6 +101,7 @@ fetch(`http://localhost:9292/reviews`, config)
     </select>
     </label>
    </div>
+   <br/>
    <button className='items-center' type="submit">Submit Review</button>
       </form>
         

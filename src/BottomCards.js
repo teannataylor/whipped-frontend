@@ -20,7 +20,7 @@ function BottomCards({recipe}) {
           <img src={recipe.image} alt={recipe.name} className='w-full h-[200px] object-cover' />
          <div className='flex justify-between px-2 py-4'> 
        <p className='font-bold font-serif'>{recipe.name} </p>
-       <Link to={`http://localhost:3000/recipes/`+ recipe.id}><button className='font-serif'>Bake</button></Link> 
+       <Link to={`http://localhost:3000/recipes/`+ recipe.id}><button className='font-serif  hover:bg-pink-400 hover:text-white'>Bake</button></Link> 
     
          </div>
  </div>

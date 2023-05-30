@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from './NavBar';
 import Display from './Display';
 import TopCards from './TopCards';
-import ToggleButtons from './ToggleButtons';
+// import ToggleButtons from './ToggleButtons';
 import TopRatedDesserts from './TopRatedDesserts';
 import BottomCards from './BottomCards';
 
@@ -24,7 +24,7 @@ function Homepage({recipes, setRecipes}) {
         <NavBar/>
         <Display/>
         <TopCards recipes={recipes} setRecipes={setRecipes}/>
-        <ToggleButtons/>
+        {/* <ToggleButtons recipes={recipes} setRecipes={setRecipes}/> */}
         <TopRatedDesserts renderDesserts={renderDesserts}/>
         
     </div>

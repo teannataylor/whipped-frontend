@@ -14,11 +14,12 @@ function Form({setRecipes}) {
       description: "",
       instructions: "",
       image:"",
-      dessert_id: 0, 
+      dessert_id: 1, 
   }
 
   
 const [formState, setFormState] = useState(defaultFormData);
+
  
 function handleChange(e) {
   const key = e.target.name;
@@ -137,7 +138,7 @@ return (
     <label>
       <h1>Select A Dessert Type:</h1>
       <br/>
-    <select className='form-select' name="dessert_id" value={formState.dessert_id} onChange={handleValue}>
+    <select  className='form-select border border-pink-500 rounded-xl px-5 py-1' name="dessert_id" value={formState.dessert_id} onChange={handleValue}>
       <option value={1}>Cake</option>
       <option value={2}>Muffins</option>
       <option value={3}>Cookies</option>
